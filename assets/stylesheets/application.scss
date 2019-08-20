@@ -1,0 +1,115 @@
+@import 'shared_variables';
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 15px 30px;
+  background-color: #fdfdfd;
+
+  .container {
+    .change-page {
+      p {
+        font-size: $font-size-change-page;
+        float: $float-position;
+
+        @media screen and (min-width: $min-width) {
+          @include font-size-min-width($font-size-min-width-change-page);
+        }
+
+        input {
+          font-size: $font-size-change-page;
+
+          @media screen and (min-width: $min-width) {
+            @include font-size-min-width($font-size-min-width-change-page);
+          }
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        padding-right: 44px;
+
+        @media screen and (min-width: $min-width) {
+          padding-right: 422px;
+        }
+      }
+
+      .move-page {
+        padding: 0 5px;
+      }
+    }
+
+    .change-page:after {
+      @extend %joined-parameters;
+    }
+
+    .container-page {
+      .page-information {
+        float: $float-position;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px #666;
+        width: 295px;
+
+        @media screen and (min-width: $min-width) {
+          margin-right: 50px;
+          margin-bottom: 35px;
+          width: 500px;
+        }
+
+        div {
+          float: $float-position;
+
+          p {
+            margin: 0;
+          }
+
+          img {
+            @include image-size(80px, 10px);
+
+            @media screen and (min-width: $min-width) {
+              @include image-size(110px, 20px);
+            }
+          }
+
+          .email-user {
+            font-weight: bold;
+            font-size: 15px;
+
+            @media screen and (min-width: $min-width) {
+              @include font-size-min-width(28px);
+            }
+          }
+
+          .id-user {
+            margin: 13px 0;
+            font-weight: lighter;
+            font-size: $id-and-name-size;
+
+            @media screen and (min-width: $min-width) {
+              @include font-size-min-width($id-and-name-size-min-width);
+            }
+          }
+
+          .name-user {
+            font-weight: lighter;
+            font-size: $id-and-name-size;
+
+            @media screen and (min-width: $min-width) {
+              @include font-size-min-width($id-and-name-size-min-width);
+            }
+          }
+        }
+      }
+
+      .page-information:after {
+        @extend %joined-parameters;
+      }
+    }
+
+    .container-page:after {
+      @extend %joined-parameters;
+    }
+  }
+}

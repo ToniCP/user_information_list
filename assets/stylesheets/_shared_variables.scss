@@ -1,0 +1,22 @@
+@mixin image-size($property-size-img, $property-margin) {
+  width: $property-size-img;
+  height: $property-size-img;
+  margin-right: $property-margin;
+}
+
+@mixin font-size-min-width($property-font-size) {
+  font-size: $property-font-size;
+}
+
+%joined-parameters {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+$font-size-change-page: 25px;
+$min-width: 376px;
+$float-position: left;
+$id-and-name-size: 13px;
+$id-and-name-size-min-width: 25px;
+$font-size-min-width-change-page: 50px;
